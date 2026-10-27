@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace a2m2.uwa.edu.au with the final published domain before deployment. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://a2m2-uwa.github.io/a2m2-website/</loc></url>
+  <url><loc>https://a2m2-uwa.github.io/a2m2-website/research.html</loc></url>
+  <url><loc>https://a2m2-uwa.github.io/a2m2-website/team.html</loc></url>
+  <url><loc>https://a2m2-uwa.github.io/a2m2-website/publications.html</loc></url>
+  <url><loc>https://a2m2-uwa.github.io/a2m2-website/opportunities.html</loc></url>
+  <url><loc>https://a2m2-uwa.github.io/a2m2-website/contact.html</loc></url>
+</urlset>

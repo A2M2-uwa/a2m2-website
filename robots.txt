@@ -1,0 +1,5 @@
+# Replace the provisional domain in sitemap.xml and each page's canonical/OG URL before publishing.
+User-agent: *
+Allow: /
+
+Sitemap: https://a2m2-uwa.github.io/a2m2-website/sitemap.xml

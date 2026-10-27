@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>A²M² — AI Augmentation in Modern Medicine | The University of Western Australia</title>
+<meta name="description" content="A²M² is a research group at The University of Western Australia developing artificial intelligence that augments clinical decision-making — medical image analysis, vision–language models for reporting, physiological signal modelling and trustworthy evaluation.">
+
+<link rel="canonical" href="https://a2m2-uwa.github.io/a2m2-website/">
+
+<!-- Social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A²M² — AI Augmentation in Modern Medicine">
+<meta property="og:title" content="A²M² — AI Augmentation in Modern Medicine">
+<meta property="og:description" content="A research group at The University of Western Australia building AI that augments clinical decision-making.">
+<meta property="og:url" content="https://a2m2-uwa.github.io/a2m2-website/">
+<meta property="og:image" content="https://a2m2-uwa.github.io/a2m2-website/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The A²M² logo: a human profile encircled by a purple-to-teal gradient ring with cradling hands.">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Icons -->
+<link rel="icon" href="assets/img/favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/icon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0B0A12">
+
+<!-- Fonts: preconnect so the stylesheet request starts early. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="assets/css/styles.css?v=1">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": "A²M² — AI Augmentation in Modern Medicine",
+  "alternateName": "A2M2",
+  "url": "https://a2m2-uwa.github.io/a2m2-website/",
+  "logo": "https://a2m2-uwa.github.io/a2m2-website/assets/img/logo-full.png",
+  "description": "Research group developing artificial intelligence that augments clinical decision-making, based in the Department of Computer Science and Software Engineering at The University of Western Australia.",
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "The University of Western Australia",
+    "url": "https://www.uwa.edu.au/"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "35 Stirling Highway, Crawley",
+    "addressLocality": "Perth",
+    "addressRegion": "WA",
+    "postalCode": "6009",
+    "addressCountry": "AU"
+  }
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ==================================================================
+     SITE HEADER
+     This block is identical on every page. If you change it here,
+     copy the change into the other .html files.
+     =================================================================== -->
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo-mark-tight.png" alt="" width="752" height="779">
+      <span class="brand__text">
+        <span class="brand__name">A²M²</span>
+        <span class="brand__sub">AI in Modern Medicine</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Open navigation menu">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
+        <li><a class="nav__link" href="research.html">Research</a></li>
+        <li><a class="nav__link" href="team.html">Team</a></li>
+        <li><a class="nav__link" href="publications.html">Publications</a></li>
+        <li><a class="nav__link" href="opportunities.html">Opportunities</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a class="btn btn--sm btn--on-dark" href="opportunities.html">Join us</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================================================================
+       HERO
+       =============================================================== -->
+  <section class="hero">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <div>
+        <p class="eyebrow">The University of Western Australia</p>
+        <h1>Artificial intelligence that <span class="gradient-text">augments</span> modern medicine</h1>
+        <p class="hero__lede">
+          A²M² builds machine learning methods that work alongside clinicians rather than
+          around them — reading medical images, describing findings in language, and making
+          sense of physiological signals, with the reliability that clinical practice demands.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn" href="research.html">Explore our research <span aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn--on-dark" href="opportunities.html">Work with us</a>
+        </div>
+
+        <p class="hero__meta">
+          <span>Department of Computer Science &amp; Software Engineering</span>
+          <span>Perth, Western Australia</span>
+        </p>
+      </div>
+
+      <div class="hero__figure">
+        <img src="assets/img/logo-full.png"
+             alt="The A²M² logo: a human profile encircled by a purple-to-teal gradient ring with cradling hands and circuit traces."
+             width="1185" height="1059" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       MISSION
+       =============================================================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="feature-row">
+        <div>
+          <p class="eyebrow">Our purpose</p>
+          <h2>Augmentation, not replacement.</h2>
+          <div class="prose" style="margin-top: var(--space-sm);">
+            <p>
+              Clinical medicine generates more data than any individual can read closely:
+              volumetric scans, overnight physiological recordings, longitudinal records.
+              Machine learning can surface what matters in that data, but a model is only
+              useful in a clinic if its behaviour is predictable, measurable and explainable.
+            </p>
+            <p>
+              Our work sits at that intersection. We develop computer vision, natural
+              language processing and signal-processing methods for medical problems, and
+              we treat evaluation as a first-class research question rather than a final
+              table in a paper.
+            </p>
+          </div>
+          <div class="btn-row" style="margin-top: var(--space-md);">
+            <a class="arrow-link" href="research.html">Read about our research themes <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="grid grid--pair" data-reveal-group>
+          <div class="card" data-reveal>
+            <h3>Clinically grounded</h3>
+            <p>Projects are shaped with clinicians and medical physicists, on real patient cohorts and trial data.</p>
+          </div>
+          <div class="card" data-reveal>
+            <h3>Methods first</h3>
+            <p>We publish architectures, metrics and analysis — not just applications of existing tools.</p>
+          </div>
+          <div class="card" data-reveal>
+            <h3>Measured honestly</h3>
+            <p>Reproducibility and observer variability are part of the result, not a footnote.</p>
+          </div>
+          <div class="card" data-reveal>
+            <h3>Open by default</h3>
+            <p>Preprints, code and trained models released wherever ethics and licensing allow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       LEADERSHIP
+       =============================================================== -->
+  <section class="section section--alt2">
+    <div class="wrap">
+      <div class="feature-row">
+        <div>
+          <p class="eyebrow">Co-directors</p>
+          <h2>Built by researchers who span methods and medicine</h2>
+          <p class="lede" style="margin-top: var(--space-sm);">
+            A²M² is jointly led by Dr Naeha Sharif and Dr Ghulam Mubashar Hassan,
+            Senior Lecturers in the Department of Computer Science and Software Engineering
+            at UWA.
+          </p>
+          <div class="btn-row" style="margin-top: var(--space-md);">
+            <a class="arrow-link" href="team.html">Meet the team <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="grid" data-reveal-group>
+          <a class="card leader-card" href="team.html#naeha-sharif" data-reveal>
+            <img class="leader-card__photo" src="assets/img/team/naeha-sharif.jpg"
+                 alt="Dr Naeha Sharif" width="720" height="720" loading="lazy">
+            <span>
+              <span class="leader-card__role">Co-Director</span>
+              <h3>Dr Naeha Sharif</h3>
+              <p>Computer vision, vision–language models and medical AI.</p>
+            </span>
+          </a>
+          <a class="card leader-card" href="team.html#ghulam-mubashar-hassan" data-reveal>
+            <img class="leader-card__photo" src="assets/img/team/ghulam-mubashar-hassan.jpg"
+                 alt="Dr Ghulam Mubashar Hassan" width="720" height="720" loading="lazy">
+            <span>
+              <span class="leader-card__role">Co-Director</span>
+              <h3>Dr Ghulam Mubashar Hassan</h3>
+              <p>Medical image analysis, machine learning and optimisation.</p>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       RESEARCH THEMES
+       =============================================================== -->
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section-head section-head--center">
+        <p class="eyebrow">Research themes</p>
+        <h2>Four directions, one question</h2>
+        <p class="lede">How do we build models a clinician can actually rely on?</p>
+      </div>
+
+      <div class="grid grid--4" data-reveal-group>
+        <a class="card pillar card--link" href="research.html#imaging" data-reveal>
+          <span class="pillar__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
+              <circle cx="12" cy="12" r="4"/>
+            </svg>
+          </span>
+          <p class="pillar__num">01</p>
+          <h3>Medical image analysis</h3>
+          <p>Segmentation and quantification in MRI, PET and CT — including brain tumours and coronary arteries.</p>
+          <span class="arrow-link" style="margin-top:auto; padding-top:var(--space-xs)">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+
+        <a class="card pillar card--link" href="research.html#vision-language" data-reveal>
+          <span class="pillar__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <path d="M8 9h8M8 13h5"/>
+            </svg>
+          </span>
+          <p class="pillar__num">02</p>
+          <h3>Vision and language</h3>
+          <p>Models that describe visual findings in natural language, and metrics that judge whether the description is right.</p>
+          <span class="arrow-link" style="margin-top:auto; padding-top:var(--space-xs)">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+
+        <a class="card pillar card--link" href="research.html#signals" data-reveal>
+          <span class="pillar__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12h3l2.5-7 3 14 3-9 2 4h6.5"/>
+            </svg>
+          </span>
+          <p class="pillar__num">03</p>
+          <h3>Physiological signals</h3>
+          <p>Multi-channel time series — EEG, EOG, EMG and beyond — for staging, monitoring and early warning.</p>
+          <span class="arrow-link" style="margin-top:auto; padding-top:var(--space-xs)">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+
+        <a class="card pillar card--link" href="research.html#trustworthy" data-reveal>
+          <span class="pillar__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </span>
+          <p class="pillar__num">04</p>
+          <h3>Trustworthy evaluation</h3>
+          <p>Reproducibility, observer variability and evaluation metrics that correlate with expert judgement.</p>
+          <span class="arrow-link" style="margin-top:auto; padding-top:var(--space-xs)">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CLINICAL DOMAINS
+       =============================================================== -->
+  <section class="section section--dark">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Where we work</p>
+        <h2>Clinical problems driving the methods</h2>
+        <p class="lede">
+          Each of these areas comes from an active collaboration, and each one has pushed us
+          to change something about how we build or evaluate models.
+        </p>
+      </div>
+
+      <div class="grid grid--4" data-reveal-group>
+        <div class="domain" data-reveal>
+          <span class="domain__name">Brain oncology</span>
+          <span class="domain__detail">Brain tumour segmentation and PET volume delineation</span>
+        </div>
+        <div class="domain" data-reveal>
+          <span class="domain__name">Cardiovascular</span>
+          <span class="domain__detail">Coronary artery radiomics from PET/CT</span>
+        </div>
+        <div class="domain" data-reveal>
+          <span class="domain__name">Sleep medicine</span>
+          <span class="domain__detail">Automated sleep staging from physiological signals</span>
+        </div>
+        <div class="domain" data-reveal>
+          <span class="domain__name">Maternal health</span>
+          <span class="domain__detail">Predictive modelling of lactation and milk composition</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SELECTED PUBLICATIONS
+       =============================================================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Selected publications</p>
+        <h2>Recent work</h2>
+      </div>
+
+      <div class="pub-list">
+        <article class="pub">
+          <span class="pub__badge">PRE<br>PRINT</span>
+          <div>
+            <h3 class="pub__title">
+              <a href="https://arxiv.org/abs/2510.14383">DRBD-Mamba for Robust and Efficient Brain Tumor Segmentation with Analytical Insights</a>
+            </h3>
+            <p class="pub__authors">
+              Danish Ali, Ajmal Mian, Naveed Akhtar, <span class="is-group">Ghulam Mubashar Hassan</span>
+            </p>
+            <p class="pub__venue">arXiv preprint arXiv:2510.14383, 2025</p>
+          </div>
+        </article>
+
+        <article class="pub">
+          <span class="pub__badge">JOUR<br>NAL</span>
+          <div>
+            <h3 class="pub__title">
+              <a href="https://doi.org/10.1186/s40658-025-00751-6">Auto-segmentation, radiomic reproducibility, and comparison of radiomics between manual and AI-derived segmentations for coronary arteries in cardiac [18F]NaF PET/CT images</a>
+            </h3>
+            <p class="pub__authors">
+              Suning Li, Jake Kendrick, Martin A. Ebert, <span class="is-group">Ghulam Mubashar Hassan</span>, et al.
+            </p>
+            <p class="pub__venue">EJNMMI Physics, 2025</p>
+          </div>
+        </article>
+
+        <article class="pub">
+          <span class="pub__badge">CONF</span>
+          <div>
+            <h3 class="pub__title">
+              <a href="https://openaccess.thecvf.com/content/WACV2021/papers/Sharif_SubICap_Towards_Subword-Informed_Image_Captioning_WACV_2021_paper.pdf">SubICap: Towards Subword-Informed Image Captioning</a>
+            </h3>
+            <p class="pub__authors">
+              <span class="is-group">Naeha Sharif</span>, Mohammed Bennamoun, Wei Liu, Syed Afaq Ali Shah
+            </p>
+            <p class="pub__venue">IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2021</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="btn-row" style="margin-top: var(--space-lg);">
+        <a class="btn btn--ghost" href="publications.html">All publications <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       NEWS
+       To add an item: copy one <article> block, change the date and text.
+       Newest first. The datetime attribute should be YYYY-MM-DD.
+       =============================================================== -->
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">News</p>
+        <h2>Group updates</h2>
+      </div>
+
+      <div class="news-list">
+        <article class="news-item">
+          <time datetime="2025-10-16">16 Oct 2025</time>
+          <div>
+            <h3>DRBD-Mamba preprint released</h3>
+            <p>
+              Our work on robust and efficient brain tumour segmentation, with an analysis of
+              where state-space models help and where they do not, is now available on arXiv.
+            </p>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <time datetime="2025-04-24">24 Apr 2025</time>
+          <div>
+            <h3>Coronary radiomics study published in EJNMMI Physics</h3>
+            <p>
+              A study of radiomic reproducibility across manual and AI-derived coronary artery
+              segmentations in cardiac [18F]NaF PET/CT, using data from the VikCoVac trial.
+            </p>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <time datetime="2023-12-08">8 Dec 2023</time>
+          <div>
+            <h3>Sleep staging work published in Applied Sciences</h3>
+            <p>
+              Combining multichannel physiological signals improves automatic classification of
+              sleep stages compared with single-channel baselines.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       JOIN US
+       =============================================================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-panel" data-reveal>
+        <h2>Thinking about a PhD in medical AI?</h2>
+        <p>
+          We supervise PhD, Master's and Honours projects at UWA, and we are always glad to
+          hear from strong candidates with a background in machine learning, computer vision,
+          signal processing, medical physics or a clinical discipline.
+        </p>
+        <div class="btn-row">
+          <a class="btn" href="opportunities.html">See opportunities</a>
+          <a class="btn btn--ghost" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================================================================
+     SITE FOOTER
+     Identical on every page.
+     =================================================================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__top">
+      <div class="site-footer__about">
+        <img src="assets/img/logo-full.png" alt="A²M² — AI Augmentation in Modern Medicine" width="1185" height="1059">
+        <p>
+          Developing artificial intelligence that augments clinical decision-making, in the
+          Department of Computer Science and Software Engineering at The University of
+          Western Australia.
+        </p>
+      </div>
+
+      <nav class="footer-col" aria-labelledby="footer-explore">
+        <h2 id="footer-explore">Explore</h2>
+        <ul>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-labelledby="footer-uwa">
+        <h2 id="footer-uwa">University</h2>
+        <ul>
+          <li><a href="https://www.uwa.edu.au/">UWA</a></li>
+          <li><a href="https://www.uwa.edu.au/schools/physics-mathematics-computing">Physics, Mathematics &amp; Computing</a></li>
+          <li><a href="https://www.uwa.edu.au/study/courses/doctor-of-philosophy">Higher degree by research</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2>Find us</h2>
+        <ul>
+          <li>Computer Science &amp; Software Engineering</li>
+          <li>35 Stirling Highway, Crawley</li>
+          <li>Perth WA 6009, Australia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; <span data-current-year>2026</span> A²M², The University of Western Australia. CRICOS 00126G.</p>
+      <p><a href="https://www.uwa.edu.au/privacy">Privacy</a></p>
+    </div>
+
+    <p class="acknowledgement">
+      The University of Western Australia acknowledges the Traditional Owners and Custodians
+      of this land, the Whadjuk people of the Noongar Nation, and pays respect to Elders past
+      and present.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
