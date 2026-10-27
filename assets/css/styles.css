@@ -1273,6 +1273,38 @@ a.pillar:focus-visible::before { transform: scaleX(1); }
 }
 
 
+/* Decorative world map (Contact page). No tracking; purely illustrative. */
+.worldmap-section { text-align: center; }
+.worldmap {
+  margin: var(--space-lg) auto 0;
+  max-width: 60rem;
+}
+.worldmap__svg {
+  width: 100%;
+  height: auto;
+}
+.worldmap__caption {
+  margin-top: var(--space-sm);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--on-dark-soft);
+}
+.worldmap__pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: worldmap-pulse 2800ms var(--ease) infinite;
+}
+@keyframes worldmap-pulse {
+  0%   { opacity: 0.7; transform: scale(0.7); }
+  70%  { opacity: 0;   transform: scale(2.4); }
+  100% { opacity: 0;   transform: scale(2.4); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .worldmap__pulse { animation: none; opacity: 0.5; }
+}
+
+
 /* 11. News and timeline =================================================== */
 
 .news-list { display: flex; flex-direction: column; }
