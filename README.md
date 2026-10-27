@@ -9,8 +9,9 @@ The site has no framework, package manager or build step. It is designed to depl
 | Page | File | Purpose |
 | --- | --- | --- |
 | Home | `index.html` | Group mission, research themes, co-directors, recent work and news |
-| Research | `research.html` | Methods, clinical applications and collaborators |
-| Team | `team.html` | Equal co-director profiles and group recruitment message |
+| Research | `research.html` | Main clinical programmes and shared capabilities |
+| Research Community | `research-community.html` | Current Medical AI researchers, selected student research and selected funding |
+| Team | `team.html` | Co-director profiles and group recruitment message |
 | Publications | `publications.html` | Searchable and filterable selected publications |
 | Opportunities | `opportunities.html` | Student and collaborator pathways |
 | Contact | `contact.html` | Contact routes, collaboration guidance and location |
@@ -41,21 +42,41 @@ The canonical URLs, Open Graph metadata, `robots.txt`, sitemap and web manifest 
 
 The contact page uses `ghulam.hassan@uwa.edu.au`, found on UWA’s A²M² research-degree project listing. Add or replace direct contact details for Dr Naeha Sharif only after confirming the preferred public address.
 
-### 3. Review publication wording
+### 3. Update publications
 
-`publications.html` intentionally contains a selected set of source-linked work, not a complete CV. Add new items near the top and keep the attributes in place so filtering continues to work:
+Publication records live in one file:
 
-```html
-<article class="pub" data-year="2026" data-type="journal">
+```text
+assets/data/publications.json
 ```
 
-Allowed `data-type` values are `journal`, `conference`, `preprint` and `book`. The year filter currently has buttons for `2026`, `2025`, `2023` and `earlier`; add a button if you introduce a new year.
+Add one structured record for each new output. Required fields are `id`, `title`, `year`, `yearGroup`, `type`, `authors`, `venue`, `url`, `links` and `programmeTags`.
+
+Allowed `type` values are `journal`, `conference`, `preprint` and `book`. Use one of these programme IDs when relevant:
+
+- `brain-cognition`
+- `vision-eye-health-oculomics`
+- `cancer-imaging-precision-oncology`
+- `vascular-health-healthy-ageing`
+
+Set a positive `featuredOrder` only for records that should appear on the homepage. Add collaborator information only when the specific collaborator and relationship are confirmed for that publication, and set `verified` to `true`. The Publications page derives its filters and the homepage derives its featured outputs from this file automatically.
 
 ## Updating regular content
 
 ### Add a news item
 
 In `index.html`, copy one `<article class="news-item">` block. Place it above older entries and update both the machine-readable `datetime` value (`YYYY-MM-DD`) and visible date.
+
+### Update the research community
+
+`assets/data/community.json` is the single record for the Research Community page. It has four maintained lists:
+
+- `currentPhdResearchers`
+- `selectedProjects`
+- `alumni`
+- `fundedProjects`
+
+Use a controlled `icon` value (`brain`, `eye`, `cancer`, `vascular` or `report`) and one of the documented programme IDs. Add a person only when their name, topic and public display are confirmed. To move a researcher to alumni, move their record from `currentPhdResearchers` to `alumni` and add optional completion or current-role information only with approval. Never add student IDs.
 
 ### Add a person
 
@@ -98,7 +119,10 @@ The home page is intentionally static for now. A 6–8 second, silent **WebM** l
 ```text
 assets/
 ├── css/styles.css       # Design system and responsive styles
-├── js/main.js           # Mobile nav, reveal animation, publication filtering
+├── data/
+│   ├── community.json   # Canonical people, alumni, projects and funding records
+│   └── publications.json # Canonical structured publication records
+├── js/main.js           # Mobile nav, reveal animation and publication rendering
 └── img/
     ├── logo-full.png
     ├── logo-mark.png

@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "currentPhdResearchers": [
+    {
+      "id": "viska-mutiawani",
+      "name": "Viska Mutiawani",
+      "role": "PhD researcher · 2024–2027",
+      "programme": "vision-eye-health-oculomics",
+      "topic": "Automatic identification of vision disorders using visual-field tests.",
+      "icon": "eye"
+    },
+    {
+      "id": "danish-ali",
+      "name": "Danish Ali",
+      "role": "PhD researcher",
+      "programme": "cancer-imaging-precision-oncology",
+      "topic": "Robust and efficient brain-tumour segmentation from multi-modal MRI.",
+      "icon": "cancer"
+    },
+    {
+      "id": "suning-li",
+      "name": "Suning Li",
+      "role": "PhD researcher",
+      "programme": "vascular-health-healthy-ageing",
+      "topic": "Automated coronary artery segmentation and radiomic reproducibility in cardiac PET/CT imaging.",
+      "icon": "vascular"
+    },
+    {
+      "id": "branimir-rusanov",
+      "name": "Branimir Rusanov",
+      "role": "PhD researcher",
+      "programme": "cancer-imaging-precision-oncology",
+      "topic": "Cancer imaging and radiomics research connected to glioblastoma and metastatic prostate-cancer projects.",
+      "icon": "cancer"
+    }
+  ],
+  "selectedProjects": [
+    {
+      "id": "multimodal-cognitive-decline-2023",
+      "title": "Multimodal cognitive decline prediction",
+      "description": "Attention-based integration of MRI, PET and clinical information for cognitive-decline prediction.",
+      "degree": "BACS",
+      "period": "2023",
+      "programme": "brain-cognition",
+      "icon": "brain"
+    },
+    {
+      "id": "mci-ad-conversion",
+      "title": "MCI to Alzheimer’s conversion prediction",
+      "description": "Neural-network prediction of conversion from mild cognitive impairment to Alzheimer’s disease.",
+      "degree": "MPE",
+      "period": "2023–2024",
+      "programme": "brain-cognition",
+      "icon": "brain"
+    },
+    {
+      "id": "preclinical-ad-detection",
+      "title": "Early Alzheimer’s detection from brain imaging",
+      "description": "Computer-vision-aided detection of Alzheimer’s disease before symptoms become apparent.",
+      "degree": "MPE",
+      "period": "2023–2024",
+      "programme": "brain-cognition",
+      "icon": "brain"
+    },
+    {
+      "id": "alzheimer-systematic-review",
+      "title": "Deep learning in brain medical imaging",
+      "description": "Systematic review of deep-learning approaches to Alzheimer’s disease prediction using brain medical imaging.",
+      "degree": "MPE",
+      "period": "2023–2024",
+      "programme": "brain-cognition",
+      "icon": "brain"
+    },
+    {
+      "id": "probabilistic-progression-forecasting",
+      "title": "Probabilistic progression forecasting",
+      "description": "Multimodal fusion and temporal forecasting with Mamba for Alzheimer’s disease progression.",
+      "degree": "MIT",
+      "period": "2024–2025",
+      "programme": "brain-cognition",
+      "icon": "brain"
+    },
+    {
+      "id": "mri-domain-specific-severity",
+      "title": "MRI-based disease severity prediction",
+      "description": "Predicting domain-specific Alzheimer’s disease severity from structural MRI using deep learning.",
+      "degree": "BACS",
+      "period": "2024–2025",
+      "programme": "brain-cognition",
+      "icon": "brain"
+    },
+    {
+      "id": "efficient-multimodal-alzheimer-prediction",
+      "title": "Efficient multimodal Alzheimer’s prediction",
+      "description": "ROI-based modelling for efficient multimodal prediction of Alzheimer’s disease progression.",
+      "degree": "MPE",
+      "period": "2026",
+      "programme": "brain-cognition",
+      "icon": "brain"
+    },
+    {
+      "id": "early-glaucoma-progression",
+      "title": "Early glaucoma progression detection",
+      "description": "Visual-field progression analysis using archetypal analysis and TimeSformer.",
+      "degree": "MDS",
+      "period": "2025–2026",
+      "programme": "vision-eye-health-oculomics",
+      "icon": "eye"
+    },
+    {
+      "id": "ffa-medical-report-generation",
+      "title": "FFA medical report generation",
+      "description": "Automatic report generation for fundus fluorescein angiography images.",
+      "degree": "MPE",
+      "period": "2023",
+      "programme": "vision-eye-health-oculomics",
+      "icon": "eye"
+    },
+    {
+      "id": "medical-image-report-generation",
+      "title": "Automatic medical-image reporting",
+      "description": "Automatic report generation for medical images as a supervised Master’s research project.",
+      "degree": "MPE",
+      "period": "2023–2024",
+      "programme": "clinical-reporting",
+      "icon": "report"
+    },
+    {
+      "id": "disease-progression-reporting",
+      "title": "Disease progression classification for reporting",
+      "description": "Disease and progression classification to support enhanced medical report generation.",
+      "degree": "MDS",
+      "period": "2023–2024",
+      "programme": "clinical-reporting",
+      "icon": "report"
+    },
+    {
+      "id": "object-detection-report-accuracy",
+      "title": "Object detection for report accuracy",
+      "description": "Object-detection methods to improve the accuracy of generated medical reports.",
+      "degree": "BACS",
+      "period": "2023",
+      "programme": "clinical-reporting",
+      "icon": "report"
+    },
+    {
+      "id": "medication-eye-relation-extraction",
+      "title": "Medication–eye relation extraction",
+      "description": "Evaluating large language models for medication–eye relation extraction in ophthalmology clinical notes.",
+      "degree": "MIT",
+      "period": "2026",
+      "programme": "clinical-reporting",
+      "icon": "report"
+    }
+  ],
+  "alumni": [
+    {
+      "id": "juwita",
+      "name": "Dr Juwita",
+      "degree": "PhD alumnus",
+      "programme": "cancer-imaging-precision-oncology",
+      "topic": "Automatic segmentation of small abdominal organs and tumours from CT scans.",
+      "icon": "cancer"
+    },
+    {
+      "id": "afsah-saleem",
+      "name": "Dr Afsah Saleem",
+      "degree": "PhD alumna",
+      "programme": "cancer-imaging-precision-oncology",
+      "topic": "Machine-learning approaches for computer-aided diagnostics from complex medical images.",
+      "icon": "cancer"
+    },
+    {
+      "id": "nathaniel-barry",
+      "name": "Dr Nathaniel Barry",
+      "degree": "PhD alumnus",
+      "programme": "cancer-imaging-precision-oncology",
+      "topic": "Automatic segmentation and radiomics to support glioblastoma patient management.",
+      "icon": "cancer"
+    },
+    {
+      "id": "jake-kendrick",
+      "name": "Dr Jake Kendrick",
+      "degree": "PhD alumnus",
+      "programme": "cancer-imaging-precision-oncology",
+      "topic": "Quantitative management of metastatic prostate cancer using PSMA PET imaging.",
+      "icon": "cancer"
+    },
+    {
+      "id": "hezam-albaqami",
+      "name": "Dr Hezam Albaqami",
+      "degree": "PhD alumnus",
+      "programme": "brain-cognition",
+      "topic": "Machine-learning methods for detection and classification of brain pathologies using EEG.",
+      "icon": "brain"
+    }
+  ],
+  "fundedProjects": [
+    {
+      "id": "metastatic-prostate-cancer-deep-learning",
+      "title": "Deep learning for metastatic prostate cancer",
+      "funder": "Department of Health WA",
+      "period": "2025–2027",
+      "status": "Active",
+      "programme": "cancer-imaging-precision-oncology",
+      "description": "Clinical evaluation of deep learning for identification and prognosis in metastatic prostate cancer.",
+      "icon": "cancer",
+      "url": "https://research-repository.uwa.edu.au/en/persons/mubashar-hassan/"
+    },
+    {
+      "id": "open-source-radiomics-glioblastoma",
+      "title": "Open-source radiomics in glioblastoma",
+      "funder": "Royal Perth Hospital",
+      "period": "2025–2026",
+      "status": "Recently completed",
+      "programme": "cancer-imaging-precision-oncology",
+      "description": "Accelerating clinical translation through robust, automated development of radiomics models in glioblastoma.",
+      "icon": "cancer",
+      "url": "https://research-repository.uwa.edu.au/en/persons/mubashar-hassan/"
+    },
+    {
+      "id": "mri-cognitive-progression-prediction",
+      "title": "MRI and cognitive assessment for progression prediction",
+      "funder": "UWA Data Institute",
+      "period": "2025–2026",
+      "status": "Completed",
+      "programme": "brain-cognition",
+      "description": "Integrating structural MRI and cognitive assessments for Alzheimer’s disease progression prediction.",
+      "icon": "brain"
+    },
+    {
+      "id": "clinical-trial-eligibility-prescreening",
+      "title": "AI-assisted pre-screening for trial eligibility",
+      "funder": "UWA Data Institute",
+      "period": "2026–2027",
+      "status": "Active",
+      "programme": "clinical-reporting",
+      "description": "Large-language-model support for clinical trial eligibility pre-screening in a blockchain-based platform.",
+      "icon": "report"
+    },
+    {
+      "id": "brain-cancer-modality-conversion",
+      "title": "Generative AI for brain cancer imaging modalities",
+      "funder": "Department of Health WA Innovation Challenge",
+      "period": "2023–2024",
+      "status": "Completed",
+      "programme": "cancer-imaging-precision-oncology",
+      "description": "Conversion between brain cancer imaging modalities using generative AI.",
+      "icon": "cancer"
+    },
+    {
+      "id": "prostate-radiomics-survival",
+      "title": "Radiomics for prostate-cancer survival prediction",
+      "funder": "UWA Data Institute",
+      "period": "2023–2024",
+      "status": "Completed",
+      "programme": "cancer-imaging-precision-oncology",
+      "description": "Radiomics research for survival prediction in prostate-cancer patients.",
+      "icon": "cancer"
+    }
+  ]
+}

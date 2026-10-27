@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Research — A²M² | AI Augmentation in Modern Medicine</title>
-<meta name="description" content="A²M² research themes: medical image analysis in MRI, PET and CT; vision–language models and caption evaluation; physiological signal modelling; and trustworthy evaluation of clinical AI.">
+<meta name="description" content="A²M² research programmes in brain and cognition, vision and eye health, cancer imaging, and vascular health, supported by multimodal clinical AI and trustworthy translation.">
 
 <link rel="canonical" href="https://a2m2-uwa.github.io/a2m2-website/research.html">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="A²M² — AI Augmentation in Modern Medicine">
 <meta property="og:title" content="Research — A²M²">
-<meta property="og:description" content="Medical image analysis, vision–language models, physiological signals and trustworthy evaluation of clinical AI.">
+<meta property="og:description" content="Clinical AI research in brain and cognition, vision and eye health, cancer imaging, and vascular health and healthy ageing.">
 <meta property="og:url" content="https://a2m2-uwa.github.io/a2m2-website/research.html">
 <meta property="og:image" content="https://a2m2-uwa.github.io/a2m2-website/assets/img/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -39,7 +39,7 @@
       <img src="assets/img/logo-mark-tight.png" alt="" width="752" height="779">
       <span class="brand__text">
         <span class="brand__name">A²M²</span>
-        <span class="brand__sub">AI in Modern Medicine</span>
+        <span class="brand__sub">A²M² Lab</span>
       </span>
     </a>
 
@@ -54,6 +54,7 @@
       <ul class="nav__list">
         <li><a class="nav__link" href="index.html">Home</a></li>
         <li><a class="nav__link" href="research.html" aria-current="page">Research</a></li>
+        <li><a class="nav__link" href="research-community.html">Community</a></li>
         <li><a class="nav__link" href="team.html">Team</a></li>
         <li><a class="nav__link" href="publications.html">Publications</a></li>
         <li><a class="nav__link" href="opportunities.html">Opportunities</a></li>
@@ -77,11 +78,8 @@
         </ol>
       </nav>
       <p class="eyebrow">Research</p>
-      <h1>Methods built for the clinic</h1>
-      <p class="lede" style="color:#E6E2EF">, developed together rather than in isolation. A segmentation model is
-        only as trustworthy as the measurement of its variability, and a generated report is
-        only as good as the metric used to judge it.
-      </p>
+      <h1>Clinical programmes, rigorous AI</h1>
+      <p class="lede" style="color:#E6E2EF">A²M² develops and evaluates AI around clinical questions in brain and cognition, vision and eye health, cancer imaging, and vascular health and healthy ageing.</p>
     </div>
   </section>
 
@@ -89,73 +87,187 @@
   <section class="section section--tight section--alt">
     <div class="wrap">
       <div class="filter-group">
-        <span class="filter-group__label">Jump to</span>
-        <a class="chip" href="#imaging">Medical image analysis</a>
-        <a class="chip" href="#vision-language">Vision and language</a>
-        <a class="chip" href="#signals">Physiological signals</a>
-        <a class="chip" href="#trustworthy">Trustworthy evaluation</a>
+        <span class="filter-group__label">Explore</span>
+        <a class="chip" href="#brain-cognition">Brain and cognition</a>
+        <a class="chip" href="#vision-eye-health-oculomics">Vision, eye health and oculomics</a>
+        <a class="chip" href="#cancer-imaging-precision-oncology">Cancer imaging and precision oncology</a>
+        <a class="chip" href="#vascular-health-healthy-ageing">Vascular health and healthy ageing</a>
+        <a class="chip" href="#cross-cutting-capabilities">How we work</a>
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       THEME 01 — MEDICAL IMAGE ANALYSIS
+       PROGRAMME 01 — BRAIN AND COGNITION
        =============================================================== -->
-  <section class="section" id="imaging">
+  <section class="section" id="brain-cognition">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Theme 01</p>
-        <h2>Medical image analysis</h2>
+        <p class="eyebrow">Programme 01</p>
+        <h2>Brain and cognition</h2>
         <p class="lede">
-          Finding and measuring structures in volumetric scans, where the clinically
-          interesting object is often small, low-contrast and inconsistently outlined by
-          human experts.
+          Multimodal models for understanding cognitive change, brain health and the clinical
+          signals that precede decline.
         </p>
       </div>
 
       <div class="feature-row">
         <div class="prose">
-          <h3>Segmentation architectures</h3>
+          <h3>Understanding change over time</h3>
           <p>
-            We develop and analyse deep architectures for segmenting tumours and anatomy in
-            multi-modal MRI, PET and CT. Recent work examines state-space models as an
-            alternative to transformers for volumetric segmentation, asking not just whether
-            accuracy improves but which design choices are responsible and at what
-            computational cost.
+            Brain health cannot be reduced to a single scan or score. We combine MRI, PET and
+            longitudinal clinical information to investigate cognitive decline and disease
+            progression over time.
           </p>
 
-          <h3>From contours to measurements</h3>
+          <h3>Methods with a clinical endpoint</h3>
           <p>
-            A segmentation is rarely the end goal. It feeds radiomic features, volumes and
-            dose calculations, so small boundary differences can move a downstream number
-            considerably. We study how segmentation variability propagates into those
-            measurements, using automated and manual contours on the same cohorts.
+            Our work links multimodal prediction with careful neuroimaging analysis. Student
+            research and supervision contribute to a sustained programme in Alzheimer’s disease,
+            mild cognitive impairment and interpretable progression modelling.
           </p>
         </div>
 
         <div class="grid" data-reveal-group>
           <div class="card" data-reveal>
-            <div class="tag-row"><span class="tag tag--brand">MRI</span><span class="tag tag--brand">Neuro-oncology</span></div>
-            <h3>Brain tumour segmentation</h3>
+            <div class="tag-row"><span class="tag tag--brand">MRI</span><span class="tag tag--brand">PET</span><span class="tag tag--brand">Longitudinal data</span></div>
+            <h3>Cognitive decline prediction</h3>
             <p>
-              Robust and efficient segmentation of heterogeneous tumours in multi-modal MRI,
-              with analysis of where state-space models help and where they do not.
+              Multimodal neuroimaging models for predicting cognitive decline from MRI, PET
+              and clinical information.
+            </p>
+            <a class="arrow-link" href="https://arxiv.org/abs/2401.06777">Read MNA-net <span aria-hidden="true">&rarr;</span></a>
+          </div>
+
+          <div class="card" data-reveal>
+            <div class="tag-row"><span class="tag tag--teal">Neuroimaging</span><span class="tag tag--teal">Progression</span></div>
+            <h3>Progression modelling</h3>
+            <p>
+              Interpretable and multimodal approaches to characterising change in brain health
+              across time.
+            </p>
+          </div>
+
+          <div class="card" data-reveal>
+            <div class="tag-row"><span class="tag">Training</span><span class="tag">Supervision</span></div>
+            <h3>Research training in brain AI</h3>
+            <p>
+              Honours, Master’s and doctoral supervision connects technical training with
+              clinically meaningful neuroimaging questions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       PROGRAMME 02 — VISION, EYE HEALTH AND OCULOMICS
+       =============================================================== -->
+  <section class="section section--alt" id="vision-eye-health-oculomics">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Programme 02</p>
+        <h2>Vision, eye health and oculomics</h2>
+        <p class="lede">
+          Computational approaches to visual fields and ocular imaging, with a growing focus on
+          vision loss, glaucoma and eye-derived signals of health.
+        </p>
+      </div>
+
+      <div class="feature-row">
+        <div class="prose">
+          <h3>Visual fields as clinical evidence</h3>
+          <p>
+            Visual-field testing captures patterns of vision loss that matter to patients and
+            clinicians. We develop computational tools to discover, quantify and interpret
+            those patterns across eye and neurological conditions.
+          </p>
+
+          <h3>Growing into oculomics</h3>
+          <p>
+            Oculomics is an expanding direction for the group. We are building from visual
+            fields and ocular imaging toward questions about how eye-derived measures can
+            inform broader health assessment.
+          </p>
+        </div>
+
+        <div class="grid" data-reveal-group>
+          <div class="card" data-reveal>
+            <div class="tag-row"><span class="tag tag--brand">Visual fields</span><span class="tag tag--brand">Ophthalmology</span></div>
+            <h3>Visual-field pattern discovery</h3>
+            <p>
+              Generalised visual-field patterns identified with archetypal analysis and assessed
+              for their clinical relevance.
+            </p>
+            <a class="arrow-link" href="https://link.springer.com/content/pdf/10.1007/978-3-032-10351-2_6.pdf">Read the paper <span aria-hidden="true">&rarr;</span></a>
+          </div>
+
+          <div class="card" data-reveal>
+            <div class="tag-row"><span class="tag tag--teal">Glaucoma</span><span class="tag tag--teal">Progression</span></div>
+            <h3>Eye-health progression</h3>
+            <p>
+              Research on glaucoma and vision disorders focuses on detecting meaningful change
+              and supporting earlier interpretation of visual decline.
+            </p>
+          </div>
+
+          <div class="card" data-reveal>
+            <div class="tag-row"><span class="tag">Clinical language</span><span class="tag">Developing</span></div>
+            <h3>Medical reporting and information extraction</h3>
+            <p>
+              Supervision in ophthalmic and medical-image reporting informs a developing
+              programme in clinical language, structured documentation and image-to-text AI.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       PROGRAMME 03 — CANCER IMAGING AND PRECISION ONCOLOGY
+       =============================================================== -->
+  <section class="section" id="cancer-imaging-precision-oncology">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Programme 03</p>
+        <h2>Cancer imaging and precision oncology</h2>
+        <p class="lede">
+          Imaging, segmentation and quantitative analysis for cancer research, from brain tumours
+          to PET-based biomarkers and clinically grounded treatment studies.
+        </p>
+      </div>
+
+      <div class="feature-row">
+        <div class="prose">
+          <h3>From segmentation to quantitative biomarkers</h3>
+          <p>
+            Tumour contours are often the starting point for volumes, radiomic features and
+            treatment studies. We develop and evaluate AI methods that make these measurements
+            more efficient, reproducible and clinically interpretable.
+          </p>
+
+          <h3>Imaging for precision oncology</h3>
+          <p>
+            Our cancer programme spans brain tumours, glioblastoma and PET-based imaging,
+            including work relevant to metastatic prostate cancer and PSMA PET analysis.
+          </p>
+        </div>
+
+        <div class="grid" data-reveal-group>
+          <div class="card" data-reveal>
+            <div class="tag-row"><span class="tag tag--brand">MRI</span><span class="tag tag--brand">Brain tumours</span></div>
+            <h3>Robust brain-tumour segmentation</h3>
+            <p>
+              Efficient segmentation of heterogeneous tumours in multi-modal MRI, with analysis
+              of where state-space models help and where they do not.
             </p>
             <a class="arrow-link" href="https://arxiv.org/abs/2510.14383">Read the preprint <span aria-hidden="true">&rarr;</span></a>
           </div>
 
           <div class="card" data-reveal>
-            <div class="tag-row"><span class="tag tag--teal">PET/CT</span><span class="tag tag--teal">Cardiology</span></div>
-            <h3>Coronary artery quantification</h3>
-            <p>
-              Automated coronary segmentation on [18F]NaF PET and calcium-scoring CT, and the
-              reliability of radiomic features derived from it.
-            </p>
-            <a class="arrow-link" href="https://doi.org/10.1186/s40658-025-00751-6">Read the paper <span aria-hidden="true">&rarr;</span></a>
-          </div>
-
-          <div class="card" data-reveal>
-            <div class="tag-row"><span class="tag">PET</span><span class="tag">Multi-centre</span></div>
+            <div class="tag-row"><span class="tag tag--teal">PET</span><span class="tag tag--teal">Glioblastoma</span></div>
             <h3>Trial-grade volume delineation</h3>
             <p>
               Agreement of FET PET biological volumes in glioblastoma, as part of the
@@ -169,175 +281,95 @@
   </section>
 
   <!-- ================================================================
-       THEME 02 — VISION AND LANGUAGE
+       PROGRAMME 04 — VASCULAR HEALTH AND HEALTHY AGEING
        =============================================================== -->
-  <section class="section section--alt" id="vision-language">
+  <!-- ================================================================
+       PROGRAMME 04 — VASCULAR HEALTH AND HEALTHY AGEING
+       ================================================================ -->
+  <section class="section section--alt" id="vascular-health-healthy-ageing">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Theme 02</p>
-        <h2>Vision and language</h2>
+        <p class="eyebrow">Programme 04</p>
+        <h2>Vascular health and healthy ageing</h2>
         <p class="lede">
-          Describing visual content in natural language is something people do effortlessly
-          and machines do unevenly. Both halves of the problem interest us: generating the
-          description, and deciding whether it is any good.
+          Quantitative imaging and reproducible biomarkers for cardiovascular risk assessment
+          and healthier ageing.
         </p>
       </div>
 
       <div class="feature-row">
         <div class="prose">
-          <h3>Generating descriptions</h3>
+          <h3>Measurements that need to hold up</h3>
           <p>
-            Our captioning work has looked at the vocabulary problem — how the choice of
-            linguistic unit changes what a model can express. Subword-informed captioning
-            reaches competitive metric scores with a fraction of the training vocabulary of
-            word-level models, which matters for specialised domains where terminology is
-            long-tailed.
-          </p>
-          <p>
-            In medicine that long tail is the whole problem. Clinical language is dense with
-            rare, compound and abbreviated terms, and a model that cannot represent them
-            cannot report on them.
+            Imaging biomarkers are useful only when they remain reliable across observers,
+            methods and time. We study automated quantification and the reproducibility of
+            the measurements that follow from it.
           </p>
 
-          <h3>Judging descriptions</h3>
+          <h3>From vascular imaging to ageing outcomes</h3>
           <p>
-            Captioning metrics tend to agree with human judgement when averaged over a whole
-            system, and disagree badly on individual outputs. Our work on learned composite
-            metrics targets exactly that gap, because per-case reliability is what a clinical
-            setting needs.
+            Our work includes coronary PET/CT radiomics and automated assessment of abdominal
+            aortic calcification, connecting imaging-based measures with cardiovascular risk
+            and healthy-ageing questions.
           </p>
         </div>
 
         <div class="grid" data-reveal-group>
           <div class="card" data-reveal>
-            <div class="tag-row"><span class="tag tag--brand">Captioning</span><span class="tag tag--brand">NLP</span></div>
-            <h3>Subword-informed captioning</h3>
+            <div class="tag-row"><span class="tag tag--brand">PET/CT</span><span class="tag tag--brand">Radiomics</span></div>
+            <h3>Coronary artery quantification</h3>
             <p>
-              Subword language modelling improves metric scores while cutting training
-              vocabulary by roughly 90% against word-level baselines.
+              Automated coronary segmentation and reproducible radiomic features from cardiac
+              [18F]NaF PET/CT images.
             </p>
-            <a class="arrow-link" href="https://openaccess.thecvf.com/content/WACV2021/papers/Sharif_SubICap_Towards_Subword-Informed_Image_Captioning_WACV_2021_paper.pdf">WACV 2021 <span aria-hidden="true">&rarr;</span></a>
+            <a class="arrow-link" href="https://doi.org/10.1186/s40658-025-00751-6">Read the paper <span aria-hidden="true">&rarr;</span></a>
           </div>
 
           <div class="card" data-reveal>
-            <div class="tag-row"><span class="tag tag--teal">Evaluation</span><span class="tag tag--teal">Metrics</span></div>
-            <h3>Learned evaluation metrics</h3>
+            <div class="tag-row"><span class="tag tag--teal">DXA</span><span class="tag tag--teal">Healthy ageing</span></div>
+            <h3>Abdominal aortic calcification</h3>
             <p>
-              A neural evaluation metric for image captioning, designed to track human
-              judgement at the level of the individual caption.
+              AI-enabled assessment of abdominal aortic calcification for cardiovascular and
+              healthy-ageing research.
             </p>
-            <a class="arrow-link" href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Naeha_Sharif_NNEval_Neural_Network_ECCV_2018_paper.pdf">ECCV 2018 <span aria-hidden="true">&rarr;</span></a>
-          </div>
-
-          <div class="card" data-reveal>
-            <div class="tag-row"><span class="tag">Survey</span></div>
-            <h3>Vision to language</h3>
-            <p>
-              A review of the methods, metrics and datasets connecting the two modalities of
-              human communication.
-            </p>
-            <a class="arrow-link" href="https://research-repository.uwa.edu.au/en/publications/vision-to-language-methods-metrics-and-datasets/">UWA repository <span aria-hidden="true">&rarr;</span></a>
+            <a class="arrow-link" href="https://research-repository.uwa.edu.au/en/persons/naeha-sharif/">See related work <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================================================================
-       THEME 03 — PHYSIOLOGICAL SIGNALS
-       =============================================================== -->
-  <section class="section" id="signals">
+  <section class="section section--dark" id="cross-cutting-capabilities">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Theme 03</p>
-        <h2>Physiological signals and clinical data</h2>
+        <p class="eyebrow">Cross-cutting capabilities</p>
+        <h2>From data to clinical evidence</h2>
         <p class="lede">
-          Long, noisy, multi-channel recordings where the label is a clinical judgement
-          rather than a physical measurement.
-        </p>
-      </div>
-
-      <div class="feature-row">
-        <div class="prose">
-          <h3>Multi-channel fusion</h3>
-          <p>
-            Sleep staging is a good test case for signal fusion: technicians score overnight
-            studies from several simultaneous channels, and no single channel contains the
-            answer. Our work shows that integrating information across channels improves
-            automatic classification over single-channel baselines, and quantifies which
-            combinations carry the gain.
-          </p>
-
-          <h3>Prediction from routine measurements</h3>
-          <p>
-            Not every clinical question needs an image or a waveform. We also build predictive
-            models on routinely collected biochemical and compositional measurements, where
-            the research contribution is as much in careful validation as in the model itself.
-          </p>
-        </div>
-
-        <div class="grid" data-reveal-group>
-          <div class="card" data-reveal>
-            <div class="tag-row"><span class="tag tag--brand">EEG</span><span class="tag tag--brand">Time series</span></div>
-            <h3>Automated sleep staging</h3>
-            <p>
-              Machine learning on combinations of physiological signals for classifying sleep
-              stages.
-            </p>
-            <a class="arrow-link" href="https://www.mdpi.com/2076-3417/13/24/13280">Applied Sciences, 2023 <span aria-hidden="true">&rarr;</span></a>
-          </div>
-
-          <div class="card" data-reveal>
-            <div class="tag-row"><span class="tag tag--teal">Maternal health</span></div>
-            <h3>Predicting low milk supply</h3>
-            <p>
-              Milk composition as a predictor of low milk supply, using machine learning
-              approaches on measured samples.
-            </p>
-            <a class="arrow-link" href="https://pubmed.ncbi.nlm.nih.gov/39857075/">PubMed <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================================
-       THEME 04 — TRUSTWORTHY EVALUATION
-       =============================================================== -->
-  <section class="section section--dark" id="trustworthy">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Theme 04</p>
-        <h2>Trustworthy evaluation</h2>
-        <p class="lede">
-          The thread running through every other theme. A number reported without its
-          variability is not a result, and a model compared against an unreliable reference
-          cannot be ranked honestly.
+          Every programme combines multimodal clinical data with careful evaluation and a
+          translation pathway shaped by clinicians, researchers and students.
         </p>
       </div>
 
       <div class="grid grid--3" data-reveal-group>
         <div class="domain" data-reveal>
-          <span class="domain__name">Reproducibility</span>
+          <span class="domain__name">Multimodal clinical data</span>
           <span class="domain__detail">
-            Which derived features survive a change of observer? We assess inter- and
-            intra-observer reproducibility directly, and report how much of a feature set
-            is actually stable.
+            We combine medical images, physiological signals and longitudinal clinical records
+            when the clinical question demands more than one source of evidence.
           </span>
         </div>
         <div class="domain" data-reveal>
-          <span class="domain__name">Observer variability</span>
+          <span class="domain__name">Clinical language and reporting</span>
           <span class="domain__detail">
-            Human disagreement sets a ceiling on achievable accuracy. Measuring it tells us
-            when a model has reached the limit of the reference standard rather than the
-            limit of the method.
+            A developing programme in image-to-text, information extraction and structured
+            clinical documentation, informed by prior student supervision.
           </span>
         </div>
         <div class="domain" data-reveal>
-          <span class="domain__name">Metric design</span>
+          <span class="domain__name">Trustworthy evaluation</span>
           <span class="domain__detail">
-            For generated text and other open-ended outputs, we treat the evaluation metric
-            as a model in its own right, trained and validated against expert judgement.
+            Reproducibility, observer variability and clinically meaningful measures are part
+            of the result, not a final check.
           </span>
         </div>
       </div>
@@ -393,9 +425,7 @@
       <div class="site-footer__about">
         <img src="assets/img/logo-full.png" alt="A²M² — AI Augmentation in Modern Medicine" width="1185" height="1059">
         <p>
-          Developing artificial intelligence that augments clinical decision-making, in the
-          Department of Computer Science and Software Engineering at The University of
-          Western Australia.
+          Developing artificial intelligence that augments clinical decision-making.
         </p>
       </div>
 
@@ -403,6 +433,7 @@
         <h2 id="footer-explore">Explore</h2>
         <ul>
           <li><a href="research.html">Research</a></li>
+          <li><a href="research-community.html">Research Community</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="opportunities.html">Opportunities</a></li>

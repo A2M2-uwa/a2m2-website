@@ -953,6 +953,14 @@ a.pillar:focus-visible::before { transform: scaleX(1); }
 .person__links a { text-decoration: none; }
 .person__links a:hover { text-decoration: underline; }
 
+.community-meta {
+  margin-top: auto;
+  padding-top: var(--space-xs);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+.community-meta strong { color: var(--text); }
+
 /* Featured director layout: photo beside a longer bio. */
 .person--lead {
   display: grid;
@@ -1088,7 +1096,30 @@ a.pillar:focus-visible::before { transform: scaleX(1); }
   box-shadow: var(--shadow-sm);
 }
 
-.filter-group {
+.pub-filter-group {
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.pub-filter-group .filter-group__label { padding: 0; }
+.pub-search-wrap { flex: 1 1 14rem; min-width: 0; }
+.pub-search-wrap .pub-search { width: 100%; }
+.pub-load-status,
+.pub-load-error {
+  margin: 0 0 var(--space-md);
+  color: var(--text-muted);
+}
+.pub-load-error { color: var(--purple-700); font-weight: 600; }
+.community-load-status,
+.community-load-error {
+  max-width: var(--wrap);
+  margin: var(--space-md) auto 0;
+  padding-inline: var(--space-md);
+  color: var(--text-muted);
+}
+.community-load-error { color: var(--purple-700); font-weight: 600; }
+
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -1194,6 +1225,13 @@ a.pillar:focus-visible::before { transform: scaleX(1); }
   font-size: 0.95rem;
   color: var(--text-soft);
   font-style: italic;
+}
+
+.pub__programmes { margin-top: var(--space-xs); }
+.pub__collaborators {
+  margin-top: var(--space-xs);
+  color: var(--text-muted);
+  font-size: var(--step--1);
 }
 
 .pub__links {

@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "publications": [
+    {
+      "id": "fact-or-fake-2026",
+      "title": "Fact or Fake? Assessing the Role of Deepfake Detectors in Multimodal Misinformation Detection",
+      "year": 2026,
+      "yearGroup": "2026",
+      "type": "journal",
+      "authors": [
+        { "name": "A. S. M. S. Sharifuzzaman Sagar" },
+        { "name": "Mohammed Bennamoun" },
+        { "name": "Farid Boussaid" },
+        { "name": "Naeha Sharif", "groupMember": true },
+        { "name": "Lian Xu" },
+        { "name": "Shaaban Sahmoud" },
+        { "name": "Ali Kishk" }
+      ],
+      "venue": "IEEE Access, 2026",
+      "url": "https://research-repository.uwa.edu.au/en/publications/fact-or-fake-assessing-the-role-of-deepfake-detectors-in-multimod/",
+      "links": [
+        { "label": "UWA record", "url": "https://research-repository.uwa.edu.au/en/publications/fact-or-fake-assessing-the-role-of-deepfake-detectors-in-multimod/" }
+      ],
+      "programmeTags": []
+    },
+    {
+      "id": "attention-guided-vqvae-brain-tumor-2026",
+      "title": "Attention-Guided Vector Quantized Variational Autoencoder for Brain Tumor Segmentation",
+      "year": 2026,
+      "yearGroup": "2026",
+      "type": "conference",
+      "authors": [
+        { "name": "Danish Ali" },
+        { "name": "Ajmal Mian" },
+        { "name": "Naveed Akhtar" },
+        { "name": "Ghulam Mubashar Hassan", "groupMember": true }
+      ],
+      "venue": "MICCAI 2025 Proceedings, Lecture Notes in Computer Science, 2026",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-032-04927-8_7",
+      "links": [
+        { "label": "Publisher", "url": "https://link.springer.com/chapter/10.1007/978-3-032-04927-8_7" }
+      ],
+      "programmeTags": ["cancer-imaging-precision-oncology"],
+      "anchorId": "ghulam-mubashar-hassan"
+    },
+    {
+      "id": "drbd-mamba-2025",
+      "title": "DRBD-Mamba for Robust and Efficient Brain Tumor Segmentation with Analytical Insights",
+      "year": 2025,
+      "yearGroup": "2025",
+      "type": "preprint",
+      "authors": [
+        { "name": "Danish Ali" },
+        { "name": "Ajmal Mian" },
+        { "name": "Naveed Akhtar" },
+        { "name": "Ghulam Mubashar Hassan", "groupMember": true }
+      ],
+      "venue": "arXiv preprint arXiv:2510.14383, 2025",
+      "url": "https://arxiv.org/abs/2510.14383",
+      "links": [
+        { "label": "Preprint", "url": "https://arxiv.org/abs/2510.14383" }
+      ],
+      "programmeTags": ["cancer-imaging-precision-oncology"],
+      "featuredOrder": 1
+    },
+    {
+      "id": "coronary-radiomics-2025",
+      "title": "Auto-segmentation, radiomic reproducibility, and comparison of radiomics between manual and AI-derived segmentations for coronary arteries in cardiac [18F]NaF PET/CT images",
+      "year": 2025,
+      "yearGroup": "2025",
+      "type": "journal",
+      "authors": [
+        { "name": "Suning Li" },
+        { "name": "Jake Kendrick" },
+        { "name": "Martin A. Ebert" },
+        { "name": "Ghulam Mubashar Hassan", "groupMember": true },
+        { "name": "et al." }
+      ],
+      "venue": "EJNMMI Physics, 2025",
+      "url": "https://doi.org/10.1186/s40658-025-00751-6",
+      "links": [
+        { "label": "DOI", "url": "https://doi.org/10.1186/s40658-025-00751-6" },
+        { "label": "Open access", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12034606/" }
+      ],
+      "programmeTags": ["vascular-health-healthy-ageing"],
+      "featuredOrder": 2
+    },
+    {
+      "id": "visual-field-pattern-discovery-2025",
+      "title": "Generalized Visual Field Pattern Discovery Using Archetypal Analysis",
+      "year": 2025,
+      "yearGroup": "2025",
+      "type": "conference",
+      "authors": [
+        { "name": "V. Mutiawani" },
+        { "name": "N. Sharif", "groupMember": true },
+        { "name": "N. Morlet" },
+        { "name": "S. Manners" },
+        { "name": "G. M. Hassan", "groupMember": true }
+      ],
+      "venue": "International Workshop on Ophthalmic Medical Image Analysis (OMIA), held in conjunction with MICCAI 2025",
+      "url": "https://link.springer.com/content/pdf/10.1007/978-3-032-10351-2_6.pdf",
+      "links": [
+        { "label": "Paper", "url": "https://link.springer.com/content/pdf/10.1007/978-3-032-10351-2_6.pdf" }
+      ],
+      "programmeTags": ["vision-eye-health-oculomics"],
+      "featuredOrder": 3
+    },
+    {
+      "id": "mna-net-cognitive-decline-2025",
+      "title": "MNA-net: Multimodal Neuroimaging Attention-Based Architecture for Cognitive Decline Prediction",
+      "year": 2025,
+      "yearGroup": "2025",
+      "type": "conference",
+      "authors": [
+        { "name": "Jamie Vo" },
+        { "name": "Naeha Sharif", "groupMember": true },
+        { "name": "Ghulam Mubashar Hassan", "groupMember": true }
+      ],
+      "venue": "Predictive Intelligence in Medicine: 7th International Workshop, PRIME 2024 Proceedings, 2025",
+      "url": "https://arxiv.org/abs/2401.06777",
+      "links": [
+        { "label": "Preprint", "url": "https://arxiv.org/abs/2401.06777" }
+      ],
+      "programmeTags": ["brain-cognition"]
+    },
+    {
+      "id": "milk-composition-low-supply-2025",
+      "title": "Milk Composition Is Predictive of Low Milk Supply Using Machine Learning Approaches",
+      "year": 2025,
+      "yearGroup": "2025",
+      "type": "journal",
+      "authors": [
+        { "name": "Ghulam Mubashar Hassan", "groupMember": true },
+        { "name": "et al." }
+      ],
+      "venue": "2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39857075/",
+      "links": [
+        { "label": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/39857075/" }
+      ],
+      "programmeTags": []
+    },
+    {
+      "id": "sleep-stage-classification-2023",
+      "title": "Machine-Learning-Based Approaches for Sleep Stage Classification Utilising a Combination of Physiological Signals",
+      "year": 2023,
+      "yearGroup": "2023",
+      "type": "journal",
+      "authors": [
+        { "name": "Ghulam Mubashar Hassan", "groupMember": true },
+        { "name": "et al." }
+      ],
+      "venue": "Applied Sciences, 13(24), 13280, 2023",
+      "url": "https://www.mdpi.com/2076-3417/13/24/13280",
+      "links": [
+        { "label": "Publisher", "url": "https://www.mdpi.com/2076-3417/13/24/13280" }
+      ],
+      "programmeTags": []
+    },
+    {
+      "id": "fet-pet-glioblastoma-2023",
+      "title": "Delineation and agreement of FET PET biological volumes in glioblastoma: results of the nuclear medicine credentialing program from the FIG study — TROG 18.06",
+      "year": 2023,
+      "yearGroup": "2023",
+      "type": "journal",
+      "authors": [
+        { "name": "Ghulam Mubashar Hassan", "groupMember": true },
+        { "name": "et al." }
+      ],
+      "venue": "2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10611835/",
+      "links": [
+        { "label": "Open access", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10611835/" }
+      ],
+      "programmeTags": ["cancer-imaging-precision-oncology"]
+    },
+    {
+      "id": "subicap-2021",
+      "title": "SubICap: Towards Subword-Informed Image Captioning",
+      "year": 2021,
+      "yearGroup": "earlier",
+      "type": "conference",
+      "authors": [
+        { "name": "Naeha Sharif", "groupMember": true },
+        { "name": "Mohammed Bennamoun" },
+        { "name": "Wei Liu" },
+        { "name": "Syed Afaq Ali Shah" }
+      ],
+      "venue": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2021",
+      "url": "https://openaccess.thecvf.com/content/WACV2021/papers/Sharif_SubICap_Towards_Subword-Informed_Image_Captioning_WACV_2021_paper.pdf",
+      "links": [
+        { "label": "Paper", "url": "https://openaccess.thecvf.com/content/WACV2021/papers/Sharif_SubICap_Towards_Subword-Informed_Image_Captioning_WACV_2021_paper.pdf" }
+      ],
+      "programmeTags": [],
+      "anchorId": "naeha-sharif"
+    },
+    {
+      "id": "vision-to-language-2020",
+      "title": "Vision to Language: Methods, Metrics and Datasets",
+      "year": 2020,
+      "yearGroup": "earlier",
+      "type": "book",
+      "authors": [
+        { "name": "Naeha Sharif", "groupMember": true },
+        { "name": "Mohammed Bennamoun" },
+        { "name": "Wei Liu" }
+      ],
+      "venue": "Book chapter, 2020",
+      "url": "https://research-repository.uwa.edu.au/en/publications/vision-to-language-methods-metrics-and-datasets/",
+      "links": [
+        { "label": "UWA record", "url": "https://research-repository.uwa.edu.au/en/publications/vision-to-language-methods-metrics-and-datasets/" }
+      ],
+      "programmeTags": []
+    },
+    {
+      "id": "nneval-2018",
+      "title": "NNEval: Neural Network Based Evaluation Metric for Image Captioning",
+      "year": 2018,
+      "yearGroup": "earlier",
+      "type": "conference",
+      "authors": [
+        { "name": "Naeha Sharif", "groupMember": true },
+        { "name": "Lyndon White" },
+        { "name": "Mohammed Bennamoun" },
+        { "name": "Syed Afaq Ali Shah" }
+      ],
+      "venue": "European Conference on Computer Vision (ECCV), 2018",
+      "url": "https://openaccess.thecvf.com/content_ECCV_2018/papers/Naeha_Sharif_NNEval_Neural_Network_ECCV_2018_paper.pdf",
+      "links": [
+        { "label": "Paper", "url": "https://openaccess.thecvf.com/content_ECCV_2018/papers/Naeha_Sharif_NNEval_Neural_Network_ECCV_2018_paper.pdf" }
+      ],
+      "programmeTags": []
+    }
+  ]
+}
