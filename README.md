@@ -13,8 +13,7 @@ The site has no framework, package manager or build step. It is designed to depl
 | Research Community | `research-community.html` | Current Medical AI researchers, selected student research and selected funding |
 | Team | `team.html` | Co-director profiles and group recruitment message |
 | Publications | `publications.html` | Searchable and filterable selected publications |
-| Opportunities | `opportunities.html` | Student and collaborator pathways |
-| Contact | `contact.html` | Contact routes, collaboration guidance and location |
+| Join us | `opportunities.html` | Student and collaborator pathways, contact, location and map |
 
 ## Preview locally
 
