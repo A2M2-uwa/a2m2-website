@@ -628,7 +628,7 @@ p { text-wrap: pretty; }
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: var(--space-xl);
-  align-items: center;
+  align-items: start;
 }
 
 .hero h1 { color: var(--on-dark); }
@@ -641,9 +641,11 @@ p { text-wrap: pretty; }
 }
 .hero .btn-row { margin-top: var(--space-lg); }
 
+/* Sits level with the headline rather than the vertical middle of the column. */
 .hero__figure {
   display: grid;
   place-items: center;
+  margin-top: var(--space-md);
 }
 .hero__figure img {
   width: min(100%, 420px);
@@ -665,8 +667,9 @@ p { text-wrap: pretty; }
 @media (max-width: 900px) {
   .hero { padding-block: var(--space-2xl) var(--space-xl); }
   .hero__inner { grid-template-columns: 1fr; gap: var(--space-lg); }
-  .hero__figure { order: -1; }
-  .hero__figure img { width: min(68%, 260px); }
+  .hero__figure { order: -1; margin-top: 0; justify-items: start; }
+  /* The header already shows the mark, so keep this small and let the headline lead. */
+  .hero__figure img { width: min(40%, 150px); }
 }
 
 /* Compact hero for interior pages. */
@@ -880,6 +883,39 @@ a.pillar:focus-visible::before { transform: scaleX(1); }
   font-weight: 600;
   line-height: 1.5;
   color: var(--on-dark-soft);
+}
+
+/* Ambient background video for a section or panel. Decorative only. */
+.section--media {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.section-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.section-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section--media .section-bg video { opacity: 0.4; }
+/* Fade the edges and centre so text over the video stays readable. */
+.section--media .section-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(11, 10, 18, 0.55), transparent 80%),
+    linear-gradient(to bottom, var(--ink-900), transparent 22%, transparent 78%, var(--ink-900));
+}
+.cta-panel--media .section-bg { z-index: -2; }
+.cta-panel--media .section-bg video {
+  opacity: 0.55;
+  mix-blend-mode: screen;
 }
 
 /* Full-width gradient call to action. */

@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="stylesheet" href="assets/css/styles.css?v=6">
 
 <script type="application/ld+json">
 {
@@ -172,7 +172,13 @@
   <!-- ================================================================
        HOW WE WORK — CROSS-CUTTING CAPABILITIES
        =============================================================== -->
-  <section class="section section--dark" id="our-approach">
+  <section class="section section--dark section--media" id="our-approach">
+    <div class="section-bg" aria-hidden="true">
+      <video data-ambient muted loop playsinline preload="metadata"
+             poster="assets/media/bg-network-poster.jpg" width="854" height="480">
+        <source src="assets/media/bg-network.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="wrap">
       <div class="section-head section-head--center">
         <p class="eyebrow">Our approach</p>
@@ -222,7 +228,7 @@
 
       <div class="grid grid--4" data-reveal-group>
         <a class="card pillar pillar--media card--link" href="research.html#brain-cognition" data-reveal>
-          <span class="pillar__media pillar__media--light" aria-hidden="true">
+          <span class="pillar__media" aria-hidden="true">
             <video data-ambient muted loop playsinline preload="metadata"
                    poster="assets/media/brain-cognition-poster.jpg" width="640" height="360">
               <source src="assets/media/brain-cognition.mp4" type="video/mp4">
@@ -424,7 +430,13 @@
        =============================================================== -->
   <section class="section">
     <div class="wrap">
-      <div class="cta-panel" data-reveal>
+      <div class="cta-panel cta-panel--media" data-reveal>
+        <div class="section-bg" aria-hidden="true">
+          <video data-ambient muted loop playsinline preload="metadata"
+                 poster="assets/media/bg-wave-poster.jpg" width="854" height="480">
+            <source src="assets/media/bg-wave.mp4" type="video/mp4">
+          </video>
+        </div>
         <h2>Thinking about a PhD in medical AI?</h2>
         <p>
           We supervise PhD, Master's and Honours projects at UWA, and we are always glad to
@@ -498,6 +510,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=5" defer></script>
+<script src="assets/js/main.js?v=6" defer></script>
 </body>
 </html>
