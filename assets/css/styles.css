@@ -770,6 +770,76 @@ a.pillar:focus-visible::before { transform: scaleX(1); }
 }
 .pillar__icon svg { width: 24px; height: 24px; }
 
+/* Programme cards with a media header (video or animated illustration). */
+.pillar--media { padding-top: 0; }
+.pillar__media {
+  display: block;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: 0 calc(var(--space-md) * -1) var(--space-xs);
+  overflow: hidden;
+  background: var(--ink-900);
+  border-bottom: 1px solid var(--line);
+}
+.pillar__media--light { background: #fff; }
+.pillar__media video,
+.pillar__media svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms var(--ease);
+}
+.pillar--media:hover .pillar__media video,
+.pillar--media:hover .pillar__media svg { transform: scale(1.04); }
+
+.media-art__photo,
+.media-art__hot,
+.media-art__ring {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.media-art__photo { animation: media-zoom 14s ease-in-out infinite alternate; }
+.media-art__hot { animation: media-uptake 2.8s ease-in-out infinite; }
+.media-art__contour { animation: media-dash 6s linear infinite; }
+.media-art__beam--x { animation: media-sweep-x 4.2s var(--ease) infinite; }
+.media-art__ring { animation: media-ring 2.4s ease-out infinite; }
+.media-art__ring--late { animation-delay: 1.2s; }
+.media-art__ecg {
+  stroke-dasharray: 460;
+  animation: media-trace 3.2s linear infinite;
+}
+@keyframes media-zoom { from { transform: scale(1); } to { transform: scale(1.08); } }
+@keyframes media-uptake {
+  0%, 100% { opacity: 0.55; transform: scale(0.85); }
+  50%      { opacity: 1;    transform: scale(1.12); }
+}
+@keyframes media-dash { to { stroke-dashoffset: -70; } }
+@keyframes media-sweep-x {
+  0%   { transform: translateX(0);     opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateX(380px); opacity: 0; }
+}
+@keyframes media-ring {
+  0%   { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+@keyframes media-trace {
+  from { stroke-dashoffset: 460; }
+  to   { stroke-dashoffset: -460; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .media-art__photo,
+  .media-art__hot,
+  .media-art__contour,
+  .media-art__beam--x,
+  .media-art__ring,
+  .media-art__ecg { animation: none; }
+  .media-art__beam--x { opacity: 0; }
+  .media-art__ecg { stroke-dasharray: none; }
+}
+
 .pillar__num {
   font-family: var(--font-mono);
   font-size: var(--step--1);

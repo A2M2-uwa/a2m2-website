@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 
-<link rel="stylesheet" href="assets/css/styles.css?v=3">
+<link rel="stylesheet" href="assets/css/styles.css?v=5">
 
 <script type="application/ld+json">
 {
@@ -221,12 +221,12 @@
       </div>
 
       <div class="grid grid--4" data-reveal-group>
-        <a class="card pillar card--link" href="research.html#brain-cognition" data-reveal>
-          <span class="pillar__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
-              <circle cx="12" cy="12" r="4"/>
-            </svg>
+        <a class="card pillar pillar--media card--link" href="research.html#brain-cognition" data-reveal>
+          <span class="pillar__media pillar__media--light" aria-hidden="true">
+            <video data-ambient muted loop playsinline preload="metadata"
+                   poster="assets/media/brain-cognition-poster.jpg" width="640" height="360">
+              <source src="assets/media/brain-cognition.mp4" type="video/mp4">
+            </video>
           </span>
           <p class="pillar__num">01</p>
           <h3>Brain and cognition</h3>
@@ -234,12 +234,12 @@
           <span class="arrow-link" style="margin-top:auto; padding-top:var(--space-xs)">Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
 
-        <a class="card pillar card--link" href="research.html#vision-eye-health-oculomics" data-reveal>
-          <span class="pillar__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              <path d="M8 9h8M8 13h5"/>
-            </svg>
+        <a class="card pillar pillar--media card--link" href="research.html#vision-eye-health-oculomics" data-reveal>
+          <span class="pillar__media" aria-hidden="true">
+            <video data-ambient muted loop playsinline preload="metadata"
+                   poster="assets/media/eye-health-poster.jpg" width="640" height="360">
+              <source src="assets/media/eye-health.mp4" type="video/mp4">
+            </video>
           </span>
           <p class="pillar__num">02</p>
           <h3>Vision, eye health and oculomics</h3>
@@ -247,10 +247,49 @@
           <span class="arrow-link" style="margin-top:auto; padding-top:var(--space-xs)">Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
 
-        <a class="card pillar card--link" href="research.html#cancer-imaging-precision-oncology" data-reveal>
-          <span class="pillar__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 12h3l2.5-7 3 14 3-9 2 4h6.5"/>
+        <a class="card pillar pillar--media card--link" href="research.html#cancer-imaging-precision-oncology" data-reveal>
+          <span class="pillar__media" aria-hidden="true">
+            <!-- Scan photograph with a PET-style uptake hotspot, an AI segmentation contour and a sweeping scan beam. -->
+            <svg class="media-art media-art--scan" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <defs>
+                <radialGradient id="scan-hot" cx="0.5" cy="0.5" r="0.5">
+                  <stop offset="0" stop-color="#FFF4C2"/>
+                  <stop offset="0.35" stop-color="#FFB347"/>
+                  <stop offset="0.7" stop-color="#E5486A" stop-opacity="0.7"/>
+                  <stop offset="1" stop-color="#E5486A" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="scan-beam" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#5FC6DD" stop-opacity="0"/>
+                  <stop offset="0.85" stop-color="#5FC6DD" stop-opacity="0.35"/>
+                  <stop offset="1" stop-color="#E6FAFF" stop-opacity="0.9"/>
+                </linearGradient>
+                <linearGradient id="scan-shade" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#0B0A12" stop-opacity="0.75"/>
+                  <stop offset="0.35" stop-color="#0B0A12" stop-opacity="0"/>
+                  <stop offset="0.7" stop-color="#0B0A12" stop-opacity="0"/>
+                  <stop offset="1" stop-color="#0B0A12" stop-opacity="0.8"/>
+                </linearGradient>
+                <filter id="scan-glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.6" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <g class="media-art__photo">
+                <image href="assets/media/cancer-scan.jpg" x="0" y="0" width="320" height="180" preserveAspectRatio="xMidYMid slice"/>
+              </g>
+              <rect width="320" height="180" fill="url(#scan-shade)"/>
+              <circle class="media-art__hot" cx="236" cy="90" r="16" fill="url(#scan-hot)" style="mix-blend-mode:screen"/>
+              <path class="media-art__contour" d="M236 72c11 0 20 7 21 17 1 11-8 20-20 20-12 1-21-7-21-18 0-10 9-19 20-19Z" fill="none" stroke="#5FC6DD" stroke-width="1.6" stroke-dasharray="4 3" filter="url(#scan-glow)"/>
+              <g stroke="#5FC6DD" stroke-width="0.8" opacity="0.8">
+                <path d="M236 60v8M236 112v8M206 90h8M258 90h8"/>
+              </g>
+              <rect class="media-art__beam media-art__beam--x" x="-60" y="0" width="60" height="180" fill="url(#scan-beam)"/>
+              <g font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700">
+                <rect x="12" y="11" width="78" height="16" rx="8" fill="#0B0A12" fill-opacity="0.7" stroke="#9B6BC9" stroke-opacity="0.6"/>
+                <text x="51" y="22" text-anchor="middle" fill="#D6C3EC">PET / MRI fusion</text>
+                <rect x="204" y="153" width="104" height="16" rx="8" fill="#0B0A12" fill-opacity="0.7" stroke="#5FC6DD" stroke-opacity="0.7"/>
+                <text x="256" y="164" text-anchor="middle" fill="#5FC6DD">Tumour segmentation</text>
+              </g>
             </svg>
           </span>
           <p class="pillar__num">03</p>
@@ -259,11 +298,62 @@
           <span class="arrow-link" style="margin-top:auto; padding-top:var(--space-xs)">Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
 
-        <a class="card pillar card--link" href="research.html#vascular-health-healthy-ageing" data-reveal>
-          <span class="pillar__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <path d="M9 12l2 2 4-4"/>
+        <a class="card pillar pillar--media card--link" href="research.html#vascular-health-healthy-ageing" data-reveal>
+          <span class="pillar__media" aria-hidden="true">
+            <!-- Glowing artery with flowing blood cells, calcified plaques flagged by detection rings, and a live heartbeat trace. -->
+            <svg class="media-art media-art--vascular" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <defs>
+                <pattern id="vas-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+                  <path d="M16 0H0V16" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+                </pattern>
+                <linearGradient id="vas-wall" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#9B6BC9"/>
+                  <stop offset="1" stop-color="#1FA3C2"/>
+                </linearGradient>
+                <radialGradient id="vas-plaque" cx="0.4" cy="0.4" r="0.6">
+                  <stop offset="0" stop-color="#FFF6D6"/>
+                  <stop offset="1" stop-color="#D9B860"/>
+                </radialGradient>
+                <filter id="vas-glow" x="-20%" y="-60%" width="140%" height="220%">
+                  <feGaussianBlur stdDeviation="5" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <filter id="vas-soft" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.4" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <path id="vas-path" d="M-20 78C60 40 120 120 180 82S280 44 340 76"/>
+              </defs>
+              <rect width="320" height="180" fill="#0B0A12"/>
+              <rect width="320" height="180" fill="url(#vas-grid)"/>
+              <use href="#vas-path" fill="none" stroke="url(#vas-wall)" stroke-width="34" stroke-linecap="round" opacity="0.28" filter="url(#vas-glow)"/>
+              <use href="#vas-path" fill="none" stroke="url(#vas-wall)" stroke-width="22" stroke-linecap="round" opacity="0.45"/>
+              <use href="#vas-path" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="10" stroke-linecap="round"/>
+              <g fill="#F1B7C7">
+                <circle r="2.6"><animateMotion dur="3.2s" repeatCount="indefinite" begin="0s"><mpath href="#vas-path"/></animateMotion></circle>
+                <circle r="2"><animateMotion dur="3.2s" repeatCount="indefinite" begin="-0.6s"><mpath href="#vas-path"/></animateMotion></circle>
+                <circle r="2.8"><animateMotion dur="3.2s" repeatCount="indefinite" begin="-1.2s"><mpath href="#vas-path"/></animateMotion></circle>
+                <circle r="2.2"><animateMotion dur="3.2s" repeatCount="indefinite" begin="-1.8s"><mpath href="#vas-path"/></animateMotion></circle>
+                <circle r="2.6"><animateMotion dur="3.2s" repeatCount="indefinite" begin="-2.4s"><mpath href="#vas-path"/></animateMotion></circle>
+                <circle r="1.8"><animateMotion dur="3.2s" repeatCount="indefinite" begin="-2.9s"><mpath href="#vas-path"/></animateMotion></circle>
+              </g>
+              <g filter="url(#vas-soft)">
+                <ellipse cx="38" cy="57" rx="6" ry="3.4" fill="url(#vas-plaque)" transform="rotate(-25 38 57)"/>
+                <ellipse cx="106" cy="98" rx="8" ry="4" fill="url(#vas-plaque)" transform="rotate(30 106 98)"/>
+                <ellipse cx="262" cy="42" rx="7" ry="3.6" fill="url(#vas-plaque)" transform="rotate(-4 262 42)"/>
+              </g>
+              <g fill="none" stroke="#5FC6DD" stroke-width="1.2">
+                <circle class="media-art__ring" cx="106" cy="98" r="11"/>
+                <circle class="media-art__ring media-art__ring--late" cx="262" cy="42" r="10"/>
+              </g>
+              <path d="M106 98L132 120h28" fill="none" stroke="#5FC6DD" stroke-opacity="0.6" stroke-width="0.8"/>
+              <path class="media-art__ecg" pathLength="460" d="M0 160h60l6-8 7 16 8-28 8 22 6-2h60l6-8 7 16 8-28 8 22 6-2h60l6-8 7 16 8-28 8 22 6-2h35" fill="none" stroke="#5FC6DD" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" filter="url(#vas-soft)"/>
+              <g font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700">
+                <rect x="12" y="11" width="112" height="16" rx="8" fill="#0B0A12" fill-opacity="0.75" stroke="#9B6BC9" stroke-opacity="0.6"/>
+                <text x="68" y="22" text-anchor="middle" fill="#D6C3EC">Calcium quantification</text>
+                <rect x="160" y="113" width="78" height="15" rx="7.5" fill="#0B0A12" fill-opacity="0.8" stroke="#5FC6DD" stroke-opacity="0.7"/>
+                <text x="199" y="123.5" text-anchor="middle" fill="#5FC6DD">Plaque detected</text>
+              </g>
             </svg>
           </span>
           <p class="pillar__num">04</p>
@@ -408,6 +498,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=3" defer></script>
+<script src="assets/js/main.js?v=5" defer></script>
 </body>
 </html>

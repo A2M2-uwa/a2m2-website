@@ -1,0 +1,6 @@
+# Large source media dropped in the project root. Web-ready versions live in assets/media/.
+/*.mp4
+/*.mov
+/*.webm
+/cancer.jpg
+/more media/

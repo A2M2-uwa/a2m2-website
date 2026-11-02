@@ -798,12 +798,64 @@
     });
   }
 
+  /* ---------------------------------------------------------------------
+     Ambient card videos
+     Muted loops play only while on screen. With reduced motion requested,
+     the poster frame is shown instead.
+     --------------------------------------------------------------------- */
+
+  function initAmbientVideo() {
+    var media = Array.prototype.slice.call(
+      document.querySelectorAll("video[data-ambient], svg.media-art")
+    );
+    if (!media.length) return;
+
+    function start(el) {
+      if (el.tagName.toLowerCase() === "video") {
+        var attempt = el.play();
+        if (attempt && typeof attempt.catch === "function") attempt.catch(function () {});
+      } else if (typeof el.unpauseAnimations === "function") {
+        el.unpauseAnimations();
+      }
+    }
+
+    function stop(el) {
+      if (el.tagName.toLowerCase() === "video") el.pause();
+      else if (typeof el.pauseAnimations === "function") el.pauseAnimations();
+    }
+
+    // SVG SMIL animations ignore CSS, so pause them explicitly.
+    if (prefersReducedMotion) {
+      media.forEach(stop);
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      media.forEach(start);
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) start(entry.target);
+          else stop(entry.target);
+        });
+      },
+      { threshold: 0.25 }
+    );
+    media.forEach(function (el) {
+      observer.observe(el);
+    });
+  }
+
   function boot() {
     document.documentElement.classList.remove("no-js");
     initNav();
     initReveal();
     initPublications();
     initCommunity();
+    initAmbientVideo();
     initYear();
   }
 
