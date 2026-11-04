@@ -1,0 +1,79 @@
+name: Publication candidates
+
+# Once a month, look for papers by the co-directors that are on OpenAlex but not
+# on the site, and list them in a GitHub Issue for a person to review.
+# Nothing is published and no files in the repository are changed.
+
+on:
+  schedule:
+    - cron: "0 22 1 * *" # 22:00 UTC on the 1st = 06:00 AWST on the 1st
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Earliest publication year (blank = last year)"
+        required: false
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: publication-candidates
+  cancel-in-progress: false
+
+jobs:
+  find-candidates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE_TITLE: Publication candidates
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Run offline tests
+        run: python3 -m unittest tools/test_sync_publications.py
+
+      - name: Look for new papers
+        env:
+          SINCE: ${{ github.event.inputs.since }}
+        run: |
+          args=()
+          if [ -n "$SINCE" ]; then args+=(--since "$SINCE"); fi
+          python3 tools/sync_publications.py fetch "${args[@]}" \
+            --markdown "$RUNNER_TEMP/candidates.md" \
+            --json "$RUNNER_TEMP/candidates.json"
+
+      - name: Create, update or close the review issue
+        run: |
+          count=$(jq length "$RUNNER_TEMP/candidates.json")
+          echo "Candidates found: $count"
+
+          number=$(gh issue list --state open --search "\"$ISSUE_TITLE\" in:title" \
+            --json number,title --jq "map(select(.title == \"$ISSUE_TITLE\"))[0].number // empty")
+
+          if [ "$count" -eq 0 ]; then
+            if [ -n "$number" ]; then
+              gh issue close "$number" --comment "No candidates remain. Closing."
+            fi
+            exit 0
+          fi
+
+          {
+            echo "Found by the monthly check. To act on an entry, run its command in a local clone, review the diff, then commit."
+            echo
+            cat "$RUNNER_TEMP/candidates.md"
+          } > "$RUNNER_TEMP/body.md"
+
+          # GitHub rejects issue bodies over 65536 characters.
+          if [ "$(wc -c < "$RUNNER_TEMP/body.md")" -gt 60000 ]; then
+            head -c 60000 "$RUNNER_TEMP/body.md" > "$RUNNER_TEMP/body.trim"
+            printf '\n\n(List truncated. Run the fetch command locally for the rest.)\n' >> "$RUNNER_TEMP/body.trim"
+            mv "$RUNNER_TEMP/body.trim" "$RUNNER_TEMP/body.md"
+          fi
+
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file "$RUNNER_TEMP/body.md"
+          else
+            gh issue create --title "$ISSUE_TITLE" --body-file "$RUNNER_TEMP/body.md"
+          fi

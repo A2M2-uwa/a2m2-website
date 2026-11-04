@@ -60,6 +60,40 @@ Allowed `type` values are `journal`, `conference`, `preprint` and `book`. Use on
 
 Set a positive `featuredOrder` only for records that should appear on the homepage. Add collaborator information only when the specific collaborator and relationship are confirmed for that publication, and set `verified` to `true`. The Publications page derives its filters and the homepage derives its featured outputs from this file automatically.
 
+You do not have to add every record by hand. See **Finding new publications** below for a tool that finds candidates for you; nothing it does is automatic, a person still reviews and approves every entry.
+
+## Finding new publications
+
+`tools/sync_publications.py` checks [OpenAlex](https://openalex.org) for papers by either co-director that are not yet on the site. It only ever **reports**; nothing is published without a person running `approve` by hand.
+
+```bash
+# List candidates published since last year (the default). Add --since 2018 to backfill.
+python3 tools/sync_publications.py fetch
+
+# Add one paper once you've checked it. --programme is required ("none" is a valid answer).
+python3 tools/sync_publications.py approve W1234567890 --programme cancer-imaging-precision-oncology
+
+# Preview the record without writing anything.
+python3 tools/sync_publications.py approve W1234567890 --programme cancer-imaging-precision-oncology --dry-run
+
+# Mark a paper out of scope so it is never suggested again.
+python3 tools/sync_publications.py reject W1234567890 --reason "not an A2M2 paper"
+```
+
+How it works:
+
+- Each co-director is looked up by ORCID iD (Hassan `0000-0002-6636-8807`, Sharif `0000-0001-8351-6288`), not by name, so results aren't polluted by other researchers sharing a name.
+- `fetch` splits candidates into **likely relevant** (matched a programme keyword) and **no programme keyword matched**, as a starting suggestion only. You choose the final `--programme` when approving.
+- Candidates already on the site (by DOI or by near-identical title) or already rejected (`tools/rejected_publications.json`) are filtered out.
+- A paper that exists as both a preprint and a published version is shown once, preferring the published copy.
+- `approve` refuses to write if the result would fail the same validation `assets/js/main.js` applies, and refuses to add a paper that's already on the site.
+
+**Known blind spot:** OpenAlex does not reliably index arXiv-only preprints that were never indexed elsewhere (this is how the DRBD-Mamba preprint was missed). Add those by hand.
+
+A GitHub Action (`.github/workflows/publication-candidates.yml`) runs this automatically on the 1st of each month and opens or updates a GitHub Issue titled "Publication candidates" listing what it found, or closes that issue once nothing is outstanding. It never writes to the repository. It only runs after being pushed to the repository's default branch, and GitHub disables scheduled workflows after 60 days with no repository activity, so an inactive repo needs the occasional commit or a manual run (`workflow_dispatch`) to keep the schedule alive.
+
+Run `python3 -m unittest tools/test_sync_publications.py` to check the script offline before relying on it.
+
 ## Updating regular content
 
 ### Add a news item
