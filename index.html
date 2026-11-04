@@ -22,9 +22,9 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- Icons -->
-<link rel="icon" href="assets/img/favicon.ico" sizes="any">
-<link rel="icon" href="assets/img/icon-512.png" type="image/png" sizes="512x512">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="icon" href="assets/img/favicon.ico?v=2" sizes="any">
+<link rel="icon" href="assets/img/icon-512.png?v=2" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#0B0A12">
 
@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 
-<link rel="stylesheet" href="assets/css/styles.css?v=6">
+<link rel="stylesheet" href="assets/css/styles.css?v=9">
 
 <script type="application/ld+json">
 {
@@ -42,7 +42,7 @@
   "name": "A²M² — AI Augmentation in Modern Medicine",
   "alternateName": "A2M2",
   "url": "https://a2m2-uwa.github.io/a2m2-website/",
-  "logo": "https://a2m2-uwa.github.io/a2m2-website/assets/img/logo-full.png",
+  "logo": "https://a2m2-uwa.github.io/a2m2-website/assets/img/logo-full.png?v=2",
   "description": "Research group developing artificial intelligence that augments clinical decision-making, based in the Department of Computer Science and Software Engineering at The University of Western Australia.",
   "parentOrganization": {
     "@type": "CollegeOrUniversity",
@@ -72,7 +72,7 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="brand" href="index.html">
-      <img src="assets/img/logo-mark-tight.png" alt="" width="752" height="779">
+      <img src="assets/img/logo-mark-tight.png?v=2" alt="" width="654" height="644">
       <span class="brand__text">
         <span class="brand__name">A²M²</span>
         <span class="brand__sub">Lab</span>
@@ -106,10 +106,16 @@
   <!-- ================================================================
        HERO
        =============================================================== -->
-  <section class="hero">
+  <section class="hero hero--media">
+    <div class="hero__media" aria-hidden="true">
+      <video data-ambient muted loop playsinline preload="metadata"
+             poster="assets/media/hero-particles-poster.jpg" width="1152" height="648">
+        <source src="assets/media/hero-particles.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="hero__grid" aria-hidden="true"></div>
     <div class="wrap hero__inner">
-      <div>
+      <div class="hero__copy">
         <p class="eyebrow">The University of Western Australia</p>
         <h1>Artificial intelligence that <span class="gradient-text">augments</span> modern medicine</h1>
         <p class="hero__lede">
@@ -129,11 +135,6 @@
         </p>
       </div>
 
-      <div class="hero__figure">
-        <img src="assets/img/logo-full.png"
-             alt="The A²M² logo: a human profile encircled by a purple-to-teal gradient ring with cradling hands and circuit traces."
-             width="1185" height="1059" fetchpriority="high">
-      </div>
     </div>
   </section>
 
@@ -461,7 +462,7 @@
   <div class="wrap">
     <div class="site-footer__top">
       <div class="site-footer__about">
-        <img src="assets/img/logo-full.png" alt="A²M² — AI Augmentation in Modern Medicine" width="1185" height="1059">
+        <img src="assets/img/logo-full.png?v=2" alt="A²M² — AI Augmentation in Modern Medicine" width="792" height="1051">
         <p>
           Developing artificial intelligence that augments clinical decision-making.
         </p>
@@ -510,6 +511,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=6" defer></script>
+<script src="assets/js/main.js?v=9" defer></script>
 </body>
 </html>

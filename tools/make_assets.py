@@ -1,10 +1,14 @@
 """
 Generate the A2M2 website image assets from the master logo.
 
-The master logo (FullLogo_NoBuffer.png) has an OPAQUE BLACK background, so it
-cannot be placed on a coloured surface as-is. This script unpremultiplies the
-black background into a real alpha channel, then derives every asset the site
-needs.
+The master logo has an OPAQUE BLACK background, so it cannot be placed on a
+coloured surface as-is. This script unpremultiplies the black background into a
+real alpha channel, then derives every asset the site needs.
+
+logo2.tif also carries a light grey frame around the black panel, so the loader
+crops to the panel interior (FRAME) before keying. Because this artwork is white
+line art, the favicons are rendered on a dark tile; white-on-transparent would
+vanish against light browser chrome.
 
 Run from the project root:
     python3 tools/make_assets.py
@@ -16,8 +20,19 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "FullLogo_NoBuffer.png"
+SRC = ROOT / "logo2.tif"
 OUT = ROOT / "assets" / "img"
+
+# Interior of the black panel, excluding the grey frame: left, top, right, bottom.
+FRAME = (7, 76, 1152, 1234)
+
+# Bands measured inside FRAME, taken from the blank gutters between elements.
+BRAIN_ROWS = (60, 730)        # brain only
+ALL_ROWS = (60, 1135)         # brain + A2M2 wordmark + tagline
+
+# The brain without the decorative spark dashes to its left, which turn to mush
+# below ~48px. Columns measured inside FRAME.
+ICON_COLS = (255, 912)
 
 # Brand colours sampled from the logo gradient.
 PURPLE = (88, 44, 127)
@@ -33,7 +48,8 @@ def load_with_alpha() -> Image.Image:
     dividing the colour back out recovers clean, anti-aliased edges instead of
     the hard fringe you get from a simple colour-key.
     """
-    rgb = np.asarray(Image.open(SRC).convert("RGB")).astype(np.float64)
+    panel = Image.open(SRC).convert("RGB").crop(FRAME)
+    rgb = np.asarray(panel).astype(np.float64)
     alpha = rgb.max(axis=2)
 
     safe = np.where(alpha == 0, 1.0, alpha)
@@ -132,27 +148,24 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     logo = load_with_alpha()
 
-    # 1. Full logo (wordmark + tagline), transparent, tightly trimmed.
-    full = trim(logo)
+    # 1. Full logo (brain + wordmark + tagline), transparent, tightly trimmed.
+    full = trim(logo.crop((0, ALL_ROWS[0], logo.width, ALL_ROWS[1])))
     full.save(OUT / "logo-full.png", optimize=True)
     print(f"logo-full.png        {full.size}")
 
-    # 2. Logo mark only: the gradient ring, hands and face, without the
-    #    wordmark underneath. Row 779 is the blank gutter measured between the
-    #    mark and the 'A2M2' glyphs.
-    mark = trim(logo.crop((0, 0, logo.width, 779)))
+    # 2. Logo mark only: the split brain, without the wordmark underneath.
+    mark = trim(logo.crop((0, BRAIN_ROWS[0], logo.width, BRAIN_ROWS[1])))
     mark.save(OUT / "logo-mark.png", optimize=True)
     print(f"logo-mark.png        {mark.size}")
 
-    # 3. Icon core: the gradient ring plus the face, with the circuit traces
-    #    dropped entirely. The traces turn to mush below ~48px, and cropping
-    #    part-way through them leaves a visible cut edge. Measured extents:
-    #    ring x=322..976, face reaches x=1073.
-    icon_core = trim(logo.crop((322, 0, 1085, 779)))
+    # 3. Icon core: the brain with the spark dashes dropped, so the shape fills
+    #    the icon tile instead of sitting off-centre beside them.
+    icon_core = trim(
+        logo.crop((ICON_COLS[0], BRAIN_ROWS[0], ICON_COLS[1], BRAIN_ROWS[1]))
+    )
 
-    # The same tight crop, transparent, for the site header. At the ~42px the
-    # header uses, the full mark's circuit traces read as noise and force the
-    # ring to render smaller.
+    # The same tight crop, transparent, for the site header, where the mark
+    # renders at roughly 42px.
     icon_core.save(OUT / "logo-mark-tight.png", optimize=True)
     print(f"logo-mark-tight.png  {icon_core.size}")
 
