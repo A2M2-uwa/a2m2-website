@@ -32,7 +32,13 @@ ALL_ROWS = (60, 1135)         # brain + A2M2 wordmark + tagline
 
 # The brain without the decorative spark dashes to its left, which turn to mush
 # below ~48px. Columns measured inside FRAME.
-ICON_COLS = (255, 912)
+ICON_COLS = (120, 912)
+
+# One spark overlaps the brain's own columns, so it cannot be cropped away by
+# x-extent alone. Measured component areas in the trimmed mark: the four sparks
+# are 1663-1877px, while the smallest element worth keeping (the cross outline)
+# is 2912px. Anything under this share of the largest component is a spark.
+SPARK_MAX_SHARE = 0.07
 
 # Brand colours sampled from the logo gradient.
 PURPLE = (88, 44, 127)
@@ -57,6 +63,56 @@ def load_with_alpha() -> Image.Image:
 
     out = np.dstack([colour, alpha]).astype(np.uint8)
     return Image.fromarray(out, mode="RGBA")
+
+
+def drop_sparks(img: Image.Image) -> Image.Image:
+    """Remove the decorative dashes radiating from the brain.
+
+    They are separate strokes, so they fall out as their own connected
+    components. One of them overlaps the brain's columns, which rules out a
+    simple crop. Keeping only the larger components leaves the hemispheres and
+    everything drawn inside them.
+    """
+    alpha = np.asarray(img.convert("RGBA"))[..., 3]
+    solid = (alpha > 20).astype(np.uint8)
+
+    # Label 8-connected regions without pulling in SciPy or OpenCV: flood fill
+    # each unvisited pixel iteratively, so a large mark cannot blow the stack.
+    labels = np.zeros(solid.shape, dtype=np.int32)
+    areas: list[int] = [0]
+    height, width = solid.shape
+    for sy in range(height):
+        for sx in range(width):
+            if not solid[sy, sx] or labels[sy, sx]:
+                continue
+            tag = len(areas)
+            stack = [(sy, sx)]
+            labels[sy, sx] = tag
+            count = 0
+            while stack:
+                y, x = stack.pop()
+                count += 1
+                for dy in (-1, 0, 1):
+                    for dx in (-1, 0, 1):
+                        ny, nx = y + dy, x + dx
+                        if 0 <= ny < height and 0 <= nx < width:
+                            if solid[ny, nx] and not labels[ny, nx]:
+                                labels[ny, nx] = tag
+                                stack.append((ny, nx))
+            areas.append(count)
+
+    if len(areas) <= 1:
+        return img
+    cutoff = max(areas) * SPARK_MAX_SHARE
+    keep = {i for i, a in enumerate(areas) if i and a >= cutoff}
+    dropped = [a for i, a in enumerate(areas) if i and i not in keep]
+    if dropped:
+        print(f"  dropped {len(dropped)} spark(s), areas {sorted(dropped)}")
+
+    out = np.asarray(img.convert("RGBA")).copy()
+    mask = np.isin(labels, list(keep))
+    out[..., 3] = np.where(mask, out[..., 3], 0)
+    return Image.fromarray(out, "RGBA")
 
 
 def trim(img: Image.Image) -> Image.Image:
@@ -161,7 +217,7 @@ def main() -> None:
     # 3. Icon core: the brain with the spark dashes dropped, so the shape fills
     #    the icon tile instead of sitting off-centre beside them.
     icon_core = trim(
-        logo.crop((ICON_COLS[0], BRAIN_ROWS[0], ICON_COLS[1], BRAIN_ROWS[1]))
+        drop_sparks(logo.crop((ICON_COLS[0], BRAIN_ROWS[0], ICON_COLS[1], BRAIN_ROWS[1])))
     )
 
     # The same tight crop, transparent, for the site header, where the mark

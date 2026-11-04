@@ -110,6 +110,18 @@ Two things to know when swapping the master logo:
 
 Browsers cache logos and favicons aggressively. The image URLs carry a `?v=` query string, so bump it when the artwork changes or returning visitors will keep seeing the old mark.
 
+### QR code
+
+`assets/qr/` holds QR codes pointing at the live site, for slides, posters and flyers. They are not referenced by any page.
+
+| File | Use |
+| --- | --- |
+| `a2m2-qr.svg` | Print. Scales to any size without softening. |
+| `a2m2-qr.png` | Slides and screens. |
+| `a2m2-qr-logo.png` | Same code with the brain mark in the centre. |
+
+All three encode `https://a2m2-uwa.github.io/a2m2-website/`. They use error-correction level H, so the centre logo does not stop them scanning; all three were verified to decode down to 120px. Regenerate them if the site URL changes, and keep the white margin when placing them.
+
 ### Director photographs
 
 After replacing either source photo, adjust the crop rectangle in `tools/make_team_photos.py` if needed and run:
